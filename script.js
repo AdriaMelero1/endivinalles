@@ -8,6 +8,11 @@ const questions = [
         questio: "El primer astronauta a trepitjar la lluna?",
         respostaCorrecte: "Neil Amstrong",
         respostaIncorrecta: "Louis Amstrong"
+    },
+    {
+        questio: "Quien es la mejor??",
+        respostaCorrecte: "Lia",
+        respostaIncorrecta: "Nadie mas"
     }
 ];
 
