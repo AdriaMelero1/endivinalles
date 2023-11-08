@@ -1,4 +1,4 @@
-body{
+/* body{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
@@ -19,4 +19,48 @@ body{
 #missatge{
     font-size: 18px;
     margin-top: 20px;
+} */
+
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
 }
+
+/* Set a background color and text color for the body */
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the title */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Style the buttons */
+.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Style the message container */
+#missatge {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Add additional styles as needed for the specific content in your script.js */
