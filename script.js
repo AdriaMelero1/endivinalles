@@ -10,9 +10,44 @@ const questions = [
         respostaIncorrecta: "Louis Amstrong"
     },
     {
-        questio: "Quien es la mejor??",
-        respostaCorrecte: "Lia",
-        respostaIncorrecta: "Nadie mas"
+        questio: "Quina part de la planta s'utilitza com a font d'amidó?",
+        respostaCorrecte: "L'arrel",
+        respostaIncorrecta: "La flor"
+    },
+    {
+        questio: "Quina és la capital del Japó?",
+        respostaCorrecte: "Tòquio",
+        respostaIncorrecta: "Kioto"
+    },   
+    {
+        questio: "Qui va escriure 'Don Quijote de la Manxa'?",
+        respostaCorrecte: "Miguel de Cervantes",
+        respostaIncorrecta: "Federico García Lorca"
+    },
+    {
+        questio: "Quin gas és més abundant a l'atmosfera de la Terra?",
+        respostaCorrecte: "Nitrogen",
+        respostaIncorrecta: "Oxigen"
+    },
+    {
+        questio: "Quin metall té l'element químic amb el símbol 'Fe'?",
+        respostaCorrecte: "Ferro",
+        respostaIncorrecta: "Plata"
+    },
+    {
+        questio: "Quina és la llengua oficial d'Argentina?",
+        respostaCorrecte: "Castellà",
+        respostaIncorrecta: "Portuguès"
+    },    
+    {
+        questio: "Quina és la ciutat més poblada del món?",
+        respostaCorrecte: "Tokio",
+        respostaIncorrecta: "Nova York"
+    },        
+    {
+        questio: "Qui va pintar 'La Gioconda'?",
+        respostaCorrecte: "Leonardo da Vinci",
+        respostaIncorrecta: "Vincent van Gogh"
     }
 ];
 
@@ -27,7 +62,7 @@ const missatge = document.getElementById("missatge");
 const btnReiniciar = document.getElementById("btnReiniciar");
 
 
-function barrejaRespostes(correcta, incorrecta){
+function barrejaRespostes(correcta, incorrecta) {
     const respostes = [correcta, incorrecta];
     respostes.sort(() => Math.random() - 0.5);
 
@@ -36,11 +71,11 @@ function barrejaRespostes(correcta, incorrecta){
 
 
 function mostraQuestio() {
-    if(indexQuestioActual < questions.length){
+    if (indexQuestioActual < questions.length) {
         const questioActual = questions[indexQuestioActual];
         questioProposada.textContent = questioActual.questio;
 
-        const[barrejatCorrecte, barrejatIncorrecte] = barrejaRespostes(
+        const [barrejatCorrecte, barrejatIncorrecte] = barrejaRespostes(
             questioActual.respostaCorrecte, questioActual.respostaIncorrecta
         );
 
@@ -48,7 +83,7 @@ function mostraQuestio() {
         btnDret.textContent = barrejatIncorrecte;
     } else {
         //Joc ha acabat
-        if(respostesCorrectes === questions.length){
+        if (respostesCorrectes === questions.length) {
             missatge.textContent = "Has guanyat! Has respost totes les questions correctament!";
         } else {
             missatge.textContent = `Joc acabat. Respostes Correctes: ${respostesCorrectes}
@@ -63,8 +98,8 @@ function mostraQuestio() {
 function comprovaResposta(respostaSeleccionada) {
 
     const questioActual = questions[indexQuestioActual];
-    
-    if(respostaSeleccionada === questioActual.respostaCorrecte){
+
+    if (respostaSeleccionada === questioActual.respostaCorrecte) {
         respostesCorrectes++;
     } else {
         respostesIncorrectes++;
